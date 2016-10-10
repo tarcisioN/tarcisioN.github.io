@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment One</title>
+
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+		<script id="vertex-shader" type="x-shader/x-vertex">
+		attribute vec4 vPosition;
+		void main() {
+		  gl_Position = vPosition;
+		}
+		</script>
+
+		<script id="fragment-shader" type="x-shader/x-fragment">
+		precision mediump float;
+		void main() {
+		  gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+		}
+		</script>
+
+		<script src='webgl-utils.js'></script>
+		<script src='initShaders.js'></script>
+		<script src='MV.js'></script>
+		<script src="index.js"></script>
+	</head>
+
+  <body>
+
+    <canvas id="gl-canvas" width="400" height="400">
+	    Seu browser parece não suportar webgl.
+    </canvas>
+
+  </body>
+</html>
