@@ -1,37 +1,51 @@
-<!DOCTYPE html>
-<html >
+<html>
+
   <head>
-    <meta charset="UTF-8">
-    <title>Assignment One</title>
 
-	<head>
-	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <link href="dont.css" type="text/css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="dont.js"></script>
+    <script src="http://dontpad.com/liguinhadoamorbolsa/jogadores.txt"></script>
 
-		<script id="vertex-shader" type="x-shader/x-vertex">
-		attribute vec4 vPosition;
-		void main() {
-		  gl_Position = vPosition;
-		}
-		</script>
+  </head>
 
-		<script id="fragment-shader" type="x-shader/x-fragment">
-		precision mediump float;
-		void main() {
-		  gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
-		}
-		</script>
-
-		<script src='webgl-utils.js'></script>
-		<script src='initShaders.js'></script>
-		<script src='MV.js'></script>
-		<script src="index.js"></script>
-	</head>
 
   <body>
 
-    <canvas id="gl-canvas" width="400" height="400">
-	    Seu browser parece não suportar webgl.
-    </canvas>
+    <div id="addJogador" style="float: right;">
+      <label>Novo Jogador</label>
+      <input id="input-nick">
+      <button id="btn-add-jogador">Add</button>
+
+    </div>
+
+    <table id="modelo" class="tabela" style="display: none;">
+      <tr id=match>
+        <td id="nome" colspan="2"></td>
+      </tr>
+    </table>
+
+    <div id=body>
+    </div>
+
+<div id="div-modal-addMatch" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <select id="selectJogadores"></select>
+    <span>W</span><input type="radio" name="wl" value="W" checked>
+    <span>L</span><input type="radio" name="wl" value="L">
+
+    <button id="addMatch">Add</button>
+  </div>
+
+</div>
 
   </body>
+
+
 </html>
